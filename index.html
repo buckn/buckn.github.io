@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>SALT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('images/salt.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  text-align: center;
+  font-size: 1000px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+</style>
 </head>
 <body>
+
+<div class="parallax"></div>
+
+<div style="height:1000px;background-color:white;font-size:500px;text-align: center;">
+SALT
+</div>
+
+<div class="parallax"></div>
 
 </body>
 </html>

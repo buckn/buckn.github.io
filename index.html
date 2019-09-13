@@ -1,76 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html onload="typeWriter()">
 <head>
-	<title>SALT</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+  <title>SALT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
 
-.parallax {
+    .parallax {
 
-  margin: 0px 0px 0px 0px;
-  border: 0px;
-  padding: 0px;
+      margin: 0px 0px 0px 0px;
+      border: 0px;
+      padding: 0px;
 
 
-  /* The image used */
-  background-image: url('images/salt.jpg');
+      /* The image used */
+      background-image: url('images/salt.jpg');
 
-  /* Full height */
-  height: 100%; 
+      /* Full height */
+      height: 100%; 
 
-  text-align: center;
-  font-size: 1000px;
+      text-align: center;
+      font-size: 1000px;
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-  opacity: 50%;
-}
+      opacity: 50%;
+    }
 
-div {
-  font-family: Arial, Helvetica, sans-serif;
-}
+    div {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-.navbar {
-  font-family: Arial, Helvetica, sans-serif;
-  position: fixed;
-  background:rgba(255,255,255,.5);
-  width: 100%;
-  height: auto;
-  font-size: 50px;
-  padding: 5px
-}
+    .navbar {
+      font-family: Arial, Helvetica, sans-serif;
+      position: fixed;
+      background:rgba(255,255,255,.5);
+      width: 100%;
+      height: auto;
+      font-size: 50px;
+      padding: 5px
+    }
 
-/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
-</style>
+    /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+    @media only screen and (max-device-width: 1366px) {
+      .parallax {
+        background-attachment: scroll;
+      }
+    }
+  </style>
 
-<script type="text/javascript">
-  
-</script>
+  <script>
+    var i = 0;
+    var txt = "SALT";
+    var speed = 350;
+
+    window.setInterval(
+     function () {
+       if (i < txt.length) {
+        document.getElementById("typewriter").innerHTML = document.getElementById("typewriter").innerHTML + txt.charAt(i);
+        i++;
+      } else if (i = txt.length) {
+        document.getElementById("typewriter").innerHTML = "     ";
+        i = 0;
+      }
+
+
+    }, speed);
+
+  </script>
 </head>
 <body>
 
-<nav class="navbar">SALT</nav>
+  <nav class="navbar">SALT</nav>
 
-<div class="parallax"></div>
+  <div class="parallax"></div>
 
-<div style="height:auto;font-size:500px;text-align: center; background:rgba(255,255,255,.75);">
-SALT
-</div>
+  <div id="typewriter" style="height:576px;font-size:500px;text-align: center; background:rgba(255,255,255,.75);">
 
-<div class="parallax"></div>
+  </div>
+
+  <div class="parallax"></div>
 
 </body>
 </html>
